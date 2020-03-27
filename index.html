@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<script type="text/javascript" src="redirections.js"></script>
+		<script type="text/javascript">
+			window.location.href = data[document.location.search.match("redirect=(.+)")[1].toLocaleLowerCase()];
+		</script>
+	</head>
+</html>
