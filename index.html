@@ -7,4 +7,16 @@
 			window.location.href = data[document.location.search.match("redirect=(.+)")[1].toLocaleLowerCase()];
 		</script>
 	</head>
+	<body>
+		<div id="container">
+			<div id="mainBox">
+				<img id="moduleIcon" src="https://i.imgur.com/QxcTM0H.png" />
+				<div id="moduleInfo">
+					<h1 id="moduleName">Error: Invalid Link.</h1>
+					<h2 id="moduleOwner"></h2>
+					<button id="donateButton" disabled="true" onclick="redirect()">Donate</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
