@@ -2,6 +2,9 @@ var moduleName = new URLSearchParams(document.location.search).get("redirect").t
 var module = data[moduleName]
 
 function redirect() {
+  let button = document.getElementById("donateButton");
+  button.textContent = "Loading...";
+  button.classList += "loading";
   window.location.href = module["url"].toLocaleLowerCase();
 }
 
