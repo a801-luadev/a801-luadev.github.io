@@ -1,6 +1,6 @@
 // Example:
 /*
-let data = {
+data = {
     "bolodefchoco": { // Module name
         "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TSTEG3PXK4HJ4&source=url", // URL to donation link
         "icon": "kFrAYfd", // Imgur ID
@@ -10,7 +10,7 @@ let data = {
 }
 */
 
-let data = {
+data = {
 	"bolodefchoco": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TSTEG3PXK4HJ4&source=url",
 		"owner": "Bolodefchoco#0000"
