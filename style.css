@@ -2,6 +2,7 @@ body {
   background: #0E242D;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #C2C2DA;
+  height: 50vh;
 }
 img {
   -webkit-user-drag: none;
@@ -24,7 +25,7 @@ img {
   background: #1C3C41;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 20px;
   display: flex;
   justify-content: space-evenly;
