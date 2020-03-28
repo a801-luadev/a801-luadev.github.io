@@ -1,10 +1,17 @@
-var moduleName = new URLSearchParams(document.location.search).get("redirect").toLocaleLowerCase();
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+var moduleName = getUrlParameter("redirect");
 var module = data[moduleName]
 
 function redirect() {
   let button = document.getElementById("donateButton");
   button.textContent = "Loading...";
-  button.classList += "loading";
+  button.className += " loading";
   window.location.href = module["url"].toLocaleLowerCase();
 }
 
