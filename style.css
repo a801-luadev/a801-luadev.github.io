@@ -3,6 +3,13 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #C2C2DA;
 }
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 #container {
   width: 100%;
   height: 100%;
@@ -27,6 +34,7 @@ body {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 #moduleIcon {
   width: 100px;
   height: 100px;
@@ -58,4 +66,29 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#donateButton:hover,
+#donateButton:not(.loading) {
+  background-color: #224E67;
+  border-radius: 8px;
+}
+#donateButton:active,
+#donateButton.loading {
+  background-color: #00304D;
+  border-radius: 5px;
+  border-color: #192329;
+}
+#donateButton:disabled {
+  background-color: #2B3F4A;
+  color: #21212B;
+  border-width: 0.4px;
+  cursor: default;
+}
+#donateButton:focus {
+  outline: none;
+}
+#donateButton.loading {
+  cursor: default;
 }
