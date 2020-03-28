@@ -1,94 +1,64 @@
 body {
-  background: #0E242D;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #C2C2DA;
-  height: 50vh;
-}
-img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-}
-#container {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#mainBox {
-  margin: 0;
-  text-align: center;
-  background: #1C3C41;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 20px;
-  display: flex;
-  justify-content: space-evenly;
+	background: #0E242D;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #C2C2DA;
+	height: 50vh;
 }
 
-#mainBox * {
-  padding-left: 5px;
-  padding-right: 5px;
+a {
+	text-decoration: none;
+}
+
+.big-green {
+	font-size: 3vh;
+	color: #2ECF73;
+}
+
+.red {
+	color: #CB546B;
+}
+
+.yellow {
+	color: #BABD2F;
+}
+
+.mt-blue {
+	color: #7AC9C4;
+	font-weight: bold;
+}
+
+#moduleInfo {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 #moduleIcon {
-  width: 100px;
-  height: 100px;
-  float: left;
-  align-self: center;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 5px;
+	max-width: 3vh;
+	max-height: 3vh;
 }
+
 #moduleName {
-  font-size: 34px;
-  margin: 2px;
-  margin-bottom: 0px;
-  text-decoration: underline;
+	font-size: 5vh;
 }
-#moduleOwner {
-  font-size: 14px;
-  margin: 2px;
-  margin-top: 0px;
-  font-style: italic;
+
+#moduleName:before {
+	content: '#';
+	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+	padding-right: 5px;
 }
-#donateButton {
-  width: 100px;
-  height: 50px;
-  margin: 10px;
-  align-self: center;
-  background: #254558;
-  color: #C2C2DA;
-  border: 1px solid black;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+#cooldown {
+	font-weight: bold;
 }
-#donateButton:not(.loading):hover {
-  background-color: #224E67;
-  border-radius: 8px;
-}
-#donateButton:active,
-#donateButton.loading {
-  background-color: #00304D;
-  border-radius: 5px;
-  border-color: #192329;
-}
-#donateButton:disabled {
-  background-color: #2B3F4A;
-  color: #21212B;
-  border-width: 0.4px;
-  cursor: default;
-}
-#donateButton:focus {
-  outline: none;
-}
-#donateButton.loading {
-  cursor: default;
+
+#footer {
+	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 }

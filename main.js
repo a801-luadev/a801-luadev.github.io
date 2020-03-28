@@ -1,43 +1,36 @@
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
-
-var moduleName = getUrlParameter("redirect");
-var module = data[moduleName]
-
-function redirect() {
-  let button = document.getElementById("donateButton");
-  button.textContent = "Loading...";
-  button.className += " loading";
-  window.location.href = module["url"].toLocaleLowerCase();
+let redirect = function(url, cooldown) {
+	if (--cooldown.innerText <= 0)
+	{
+		clearInterval(1);
+		window.location.href = url;
+	}
 }
 
 window.onload = function() {
-  //Name
-  document.getElementById("moduleName").textContent = "#" + moduleName.toString();
+	let moduleName = document.getElementById("moduleName");
+	let moduleIcon = document.getElementById("moduleIcon");
 
-  //Owner
-  let owner = document.getElementById("moduleOwner");
-  owner.textContent = "by " + module["owner"].toString();
+	try {
+		let moduleData = document.location.search.match("redirect=(\\w+)")[1].toLocaleLowerCase();
+		if (!(moduleData in data)) throw null;
 
-  /*
-  //Host
-  if("host" in module) {
-    owner.appendChild(document.createElement("br"));
-    owner.appendChild(document.createTextNode("(Hosted by " + module["host"].toString() + ")"));
-  }
-  */
+		document.title = "Redirecting to #" + moduleData;
 
-  //Icon
-  if("icon" in module) {
-    document.getElementById("moduleIcon").src = "https://i.imgur.com/" + module["icon"] + ".png";
-  }
+		moduleName.innerText = moduleData;
+		moduleData = data[moduleData];
+		document.getElementById("owner").innerText = moduleData.owner;
+		if ("icon" in moduleData)
+			moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
 
-  //Button
-  if("url" in module) {
-    document.getElementById("donateButton").disabled = false;
-  }
+		setInterval(redirect, 1000, moduleData.url, document.getElementById("cooldown"));
+	}
+	catch(_)
+	{
+		document.title = "Invalid module.";
+
+		moduleName.className = "red";
+		document.getElementById("moduleOwner").innerText = "Invalid module.";
+		moduleIcon.src = "https://i.imgur.com/v4Iurtp.png";
+		document.getElementById("cooldownText").remove();
+	}
 }
