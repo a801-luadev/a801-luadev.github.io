@@ -17,6 +17,7 @@ let data = {
 	},
 	"signal": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TSTEG3PXK4HJ4&source=url",
+		"icon": "kFrAYfd",
 		"owner": "Bolodefchoco#0000",
 		"host": "SomeoneElse#0000"
 	},
