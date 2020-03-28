@@ -70,8 +70,7 @@ img {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-#donateButton:hover,
-#donateButton:not(.loading) {
+#donateButton:not(.loading):hover {
   background-color: #224E67;
   border-radius: 8px;
 }
