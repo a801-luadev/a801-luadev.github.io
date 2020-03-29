@@ -1,7 +1,7 @@
-let redirect = function(url, cooldown) {
+let redirect = function(self, url, cooldown) {
 	if (--cooldown.innerText <= 0)
 	{
-		clearInterval(1);
+		clearInterval(self[0]);
 		window.location.href = url;
 	}
 }
@@ -22,7 +22,8 @@ window.onload = function() {
 		if ("icon" in moduleData)
 			moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
 
-		setInterval(redirect, 1000, moduleData.url, document.getElementById("cooldown"));
+		let id = [ ];
+		id[0] = setInterval(redirect, 1000, id, moduleData.url, document.getElementById("cooldown"));
 	}
 	catch(_)
 	{
