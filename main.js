@@ -1,17 +1,23 @@
-let redirect = function(self, url, cooldown) {
+let redirect = function(url) {
+	window.location.href = url;
+}
+
+let redirectCooldown = function(self, url, cooldown) {
 	if (--cooldown.innerText <= 0)
 	{
 		clearInterval(self[0]);
-		window.location.href = url;
+		redirect(url);
 	}
 }
 
 window.onload = function() {
 	let moduleName = document.getElementById("moduleName");
 	let moduleIcon = document.getElementById("moduleIcon");
+	let cooldownText = document.getElementById("cooldownText");
+	let redirectButton = document.getElementById("redirectButton");
 
 	try {
-		let moduleData = document.location.search.match("redirect=(\\w+)")[1].toLocaleLowerCase();
+		let moduleData = document.location.search.match(/[?&]redirect=(\w+)/i)[1].toLocaleLowerCase();
 		if (!(moduleData in data)) throw null;
 
 		document.title = "Redirecting to #" + moduleData;
@@ -22,8 +28,21 @@ window.onload = function() {
 		if ("icon" in moduleData)
 			moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
 
-		let id = [ ];
-		id[0] = setInterval(redirect, 1000, id, moduleData.url, document.getElementById("cooldown"));
+		if (document.location.search.match(/[?&]hasbutton=true/i))
+		{
+			cooldownText.remove();
+			redirectButton.classList.remove("hidden");
+
+			redirectButton.addEventListener("click", () => redirect(moduleData.url), false);
+		}
+		else
+		{
+			redirectButton.remove();
+			cooldownText.classList.remove("hidden");
+
+			let id = [ ];
+			id[0] = setInterval(redirectCooldown, 1000, id, moduleData.url, document.getElementById("cooldown"));
+		}
 	}
 	catch(_)
 	{
@@ -32,6 +51,7 @@ window.onload = function() {
 		moduleName.className = "red";
 		document.getElementById("moduleOwner").innerText = "Invalid module.";
 		moduleIcon.src = "https://i.imgur.com/v4Iurtp.png";
-		document.getElementById("cooldownText").remove();
+		cooldownText.remove();
+		redirectButton.remove();
 	}
 }
