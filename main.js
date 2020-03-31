@@ -50,8 +50,10 @@ window.onload = function() {
 
 		moduleName.classList.remove("yellow");
 		moduleName.classList.add("red");
+
 		document.getElementById("moduleOwner").innerText = "Invalid module.";
 		moduleIcon.src = "https://i.imgur.com/v4Iurtp.png";
+
 		cooldownText.remove();
 		redirectButton.remove();
 	}
