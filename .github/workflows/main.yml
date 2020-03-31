@@ -64,6 +64,7 @@ jobs:
     name: Revert commit if needed
   
     steps:
+      - uses: actions/checkout@v2
       - name: Download artifact syntax_status
         uses: actions/download-artifact@v1
         with:
