@@ -1,0 +1,107 @@
+name: Validity checks
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1.1.0
+        with:
+          version: 10.x
+        
+      - name: Run syntax checks against redirections.js
+        run: node -c redirections.js
+        
+      - name: Create file syntax_status.txt and write job status to it
+        if: always()
+        run: |
+          echo ${{ job.status }} > syntax_status.txt
+
+      - name: Upload file syntax_status.txt as an artifact
+        if: always()
+        uses: actions/upload-artifact@v1
+        with:
+          name: syntax_status
+          path: syntax_status.txt
+      
+  validity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1.2.0
+        with:
+          python-version: 3.7
+
+      - name: Check validity of the links
+        run: |
+          python validity_checks.py
+      
+      - name: Create file validity_status.txt and write job status to it
+        if: always()
+        run: |
+          echo ${{ job.status }} > validity_status.txt
+
+      - name: Upload file validity_status.txt as an artifact
+        if: always()
+        uses: actions/upload-artifact@v1
+        with:
+          name: validity_status
+          path: validity_status.txt
+  
+  summary:
+    runs-on: ubuntu-latest
+    needs: [syntax, validity]
+    if: always()
+    name: Revert commit if needed
+  
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download artifact syntax_status
+        uses: actions/download-artifact@v1
+        with:
+          name: validity_status
+
+      - name: Download artifact validity_status
+        uses: actions/download-artifact@v1
+        with:
+          name: validity_status
+
+      - name: Set the statuses of syntax and validity as output parameters
+        id: set_outputs
+        run: |
+          echo "::set-output name=syntax::$(<syntax_status/syntax_status.txt)"
+          echo "::set-output name=validity::$(<validity_status/validity_status.txt)"
+      
+      - name: Set git user config
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Syntax Checker"
+      
+      - name: Check syntax failure
+        if: steps.set_outputs.outputs.syntax != 'success'
+        run: |
+          git revert HEAD~0
+          git add -f *
+          git commit -m "Revert last commit" -m "This commit had a syntax error in redirections.js"
+      
+      - name: Check link validity
+        if: steps.set_outputs.outputs.validity != 'success'
+        run: |
+          git revert HEAD~0
+          git add -f *
+          git commit -m "Revert last commit" -m "This commit had an module name, module owner or icon"
+      
+      - name: Push
+        if: steps.set_outputs.outputs.syntax != 'success' || steps.set_outputs.outputs.validity != 'success'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
