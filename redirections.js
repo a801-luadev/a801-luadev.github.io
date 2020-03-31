@@ -14,7 +14,7 @@ data = {
 	"bolodefchoco": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
 		"icon": "MIHrUyr",
-		"owner": "Bolodefchoco#0000"
+		"owner": "a"
 	},
 	"signal": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
