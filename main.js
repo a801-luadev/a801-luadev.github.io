@@ -18,14 +18,14 @@ window.onload = function() {
 
 	try {
 		let moduleData = document.location.search.match(/[?&]redirect=(\w+)/i)[1].toLocaleLowerCase();
-		if (!(moduleData in data)) throw null;
+		if (!(data.hasOwnProperty(moduleData))) throw null;
 
 		document.title = "Redirecting to #" + moduleData;
 
 		moduleName.innerText = moduleData;
 		moduleData = data[moduleData];
 		document.getElementById("owner").innerText = moduleData.owner;
-		if ("icon" in moduleData)
+		if (moduleData.hasOwnProperty("icon"))
 			moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
 
 		if (document.location.search.match(/[?&]hasbutton=true/i))
@@ -48,7 +48,8 @@ window.onload = function() {
 	{
 		document.title = "Invalid module.";
 
-		moduleName.className = "red";
+		moduleName.classList.remove("yellow");
+		moduleName.classList.add("red");
 		document.getElementById("moduleOwner").innerText = "Invalid module.";
 		moduleIcon.src = "https://i.imgur.com/v4Iurtp.png";
 		cooldownText.remove();
