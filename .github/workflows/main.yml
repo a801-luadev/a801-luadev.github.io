@@ -85,16 +85,17 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Syntax Checker"
-          git pull origin master
 
       - name: Check syntax failure
         if: steps.set_outputs.outputs.syntax != 'Success'
         run: |
+          git stash
           git revert master~0
 
       - name: Check link validity
         if: steps.set_outputs.outputs.syntax == 'Success' && steps.set_outputs.outputs.validity != 'Success'
         run: |
+          git stash
           git revert master~0
 
       - name: Push
