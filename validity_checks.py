@@ -1,6 +1,7 @@
 from urllib.request import Request, urlopen
 import traceback
 import json
+import re
 
 
 searching = "*/\n"
@@ -32,8 +33,9 @@ def check_user(data, field):
 		raise Exception(f"#{module}'s {field} does not exist.")
 
 for module, data in donations.items():
-	if (f"#{module}<").encode() not in module_list:
-		raise Exception(f"The module #{module} has not been found in the list.")
+	module_name = re.search("^(\D+)", module).group(1)
+	if (f"#{module_name}<").encode() not in module_list:
+		raise Exception(f"The module #{module_name} has not been found in the list.")
 
 	if not check_website(data["url"]):
 		raise Exception(f"#{module}'s donation link does not return a 200 status code.")
