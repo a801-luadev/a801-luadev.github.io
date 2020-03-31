@@ -85,23 +85,22 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Syntax Checker"
+          git pull origin master
       
       - name: Check syntax failure
-        if: steps.set_outputs.outputs.syntax != 'success'
+        if: steps.set_outputs.outputs.syntax != 'Success'
         run: |
           git revert HEAD~0
           git add -f *
           git commit -m "Revert last commit" -m "This commit had a syntax error in redirections.js"
       
       - name: Check link validity
-        if: steps.set_outputs.outputs.validity != 'success'
+        if: steps.set_outputs.outputs.validity != 'Success'
         run: |
           git revert HEAD~0
-          git add -f *
-          git commit -m "Revert last commit" -m "This commit had an module name, module owner or icon"
       
       - name: Push
-        if: steps.set_outputs.outputs.syntax != 'success' || steps.set_outputs.outputs.validity != 'success'
+        if: steps.set_outputs.outputs.syntax != 'Success' || steps.set_outputs.outputs.validity != 'Success'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
