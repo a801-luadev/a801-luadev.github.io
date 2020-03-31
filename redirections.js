@@ -58,5 +58,15 @@ data = {
 	"parkour": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VB6QN425S4SVU&item_name=Module+Team%27s+Donations+-+Parkour+Module&currency_code=USD&source=url",
 		"owner": "Tocutoeltuco#0000"
+	},
+	"circuit": {
+		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YYQJZHPQH4FJ4&source=url",
+		"icon": "HGt6IRK",
+		"owner": "Ninguem#0095"
+	},
+	"unotfm": {
+		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YYQJZHPQH4FJ4&source=url",
+		"icon": "cArlBKc",
+		"owner": "Ninguem#0095"
 	}
 }
