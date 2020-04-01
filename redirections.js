@@ -71,7 +71,7 @@ data = {
 	},
 	"mycity": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5A9RQHREP8KHG&source=url",
-		"icon": "TjEEXIr",
+		"icon": "e7JNuiN",
 		"owner": "Fofinhoppp#0000"
 	}
 }
