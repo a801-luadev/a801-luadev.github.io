@@ -69,4 +69,9 @@ data = {
 		"icon": "cArlBKc",
 		"owner": "Ninguem#0095"
 	}
+	"mycity": {
+		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5A9RQHREP8KHG&source=url",
+		"icon": "TjEEXIr",
+		"owner": "Fofinhoppp#0000"
+	}
 }
