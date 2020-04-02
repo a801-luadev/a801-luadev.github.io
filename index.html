@@ -18,13 +18,26 @@
 		<script type="text/javascript" src="main.js"></script>
 	</head>
 	<body>
-		<div id="moduleInfo">
+		
+		<div id="modules" class="hidden">
+			<input type="search" id="moduleSearch">
+			<table id="moduleList">
+				<tr>
+					<th>Module</th>
+					<th>Owner</th>
+					<th>Host</th>
+				</tr>
+			</table>
+		</div>
+
+		<div id="moduleInfo" class="hidden">
 			<img id="moduleIcon" src="https://i.imgur.com/M22ygpZ.png" />
 			<span id="moduleName" class="big yellow"></span><br>
 			<span id="moduleOwner" class="small">Owned by <span id="owner"></span></span><br><br>
 			<span id="cooldownText" class="hidden medium green">You will be redirected in <span id="cooldown">8</span> seconds.</span>
 			<button id="redirectButton" class="hidden btn">Donate!</button>
 		</div>
+
 		<span id="footer">Powered by the <a href="https://atelier801.com/topic?f=5&t=691642&p=40#m788" target="_blank"><span class="turquoise">Module Team</span></a>.</span>
 	</body>
 </html>
