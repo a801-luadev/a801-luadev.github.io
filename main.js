@@ -1,3 +1,5 @@
+const BASE_URI = "file:///C:/users/pradeep/desktop/a801-luadev.github.io/index.html" // a801-luadev.github.io
+
 let redirect = function(url) {
 	window.location.href = url;
 }
@@ -22,15 +24,18 @@ let getMatchedModules = function(query) {
 
 let updateModuleList = function(list) {
 	
-	moduleList.innerHTML = "<tr><th>Module</th><th>Owner</th><th>Host</th></tr>";
+	moduleList.innerHTML = "";
 
 	for (let mData of list) {
 		let name = mData[0];
-		moduleList.innerHTML += `<tr>
-			<td>${name}</td>
-			<td>${data[name].owner}</td>
-			<td>${data[name].host || data[name].owner}</td>
-		</tr>`
+		moduleList.innerHTML += `<div class="module">
+			<a href="${BASE_URI + "?redirect=" + name}" class="moduleName">
+				<img src="https://i.imgur.com/${data[name].hasOwnProperty("icon") ? data[name].icon : "M22ygpZ"}.png">
+				#${name}
+			</a>
+			<b>Owner: </b> <a href="https://atelier801.com/profile?pr=${data[name].owner.replace("#", "%23")}" class="profile">${data[name].owner}</a>
+			<span class="hoster"><b>Hosted by: </b> <a href="https://atelier801.com/proflie?pr=${data[name].owner.replace("#", "%23")}" class="profile">${data[name].host || data[name].owner}</a></span>
+		</div>`
 	}
 }
 
@@ -42,18 +47,11 @@ window.onload = function() {
 	let cooldownText = document.getElementById("cooldownText");
 	let redirectButton = document.getElementById("redirectButton");
 
+
 	if (/\/(index(\.html))?$/i.test(document.location)) {
 
 		document.getElementById("modules").classList.remove("hidden")
-		for (let name of Object.keys(data)) {
-			moduleList.innerHTML += `<tr>
-				<td>${name}</td>
-				<td>${data[name].owner}</td>
-				<td>${data[name].host || data[name].owner}</td>
-			</tr>`
-		}
-
-
+		updateModuleList(getMatchedModules(""));
 	} else {
 
 		try {
