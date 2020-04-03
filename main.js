@@ -1,4 +1,4 @@
-const BASE_URI = "file:///C:/users/pradeep/desktop/a801-luadev.github.io/index.html" // a801-luadev.github.io
+const BASE_URI = "https://a801-luadev.github.io
 
 let redirect = function(url) {
 	window.location.href = url;
@@ -100,8 +100,7 @@ window.onload = function() {
 
 	}
 
-	moduleSearch.onkeyup = () => {
-		console.log(moduleSearch.value.replace(/\s+/g, ""))
+	moduleSearch.onkeyup = () => {  
 		updateModuleList(getMatchedModules(moduleSearch.value.replace(/\s+/g, "")))
 	}
 
