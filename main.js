@@ -59,7 +59,8 @@ window.onload = function() {
 	let redirectButton = document.getElementById("redirectButton");
 
 
-	if (/\/(index(\.html))?$/i.test(document.location)) {
+	if ((/\/(index(?:\.html))?$/i).test(document.location)) {
+
 
 		document.getElementById("modules").classList.remove("hidden")
 		updateModuleList(getMatchedModules(""));
