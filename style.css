@@ -173,29 +173,30 @@ a {
 
 #moduleSearch {
 	position: relative;
-    left: calc(4vw + 8px);
-    width: 90%;
-    top: 10px;
-    margin: 5px 0px;
-    padding: 3px;
-    font-size: 20px;
-    border-radius: 6px;
-    box-shadow: inset 5px 3px 6px 3px rgba(214, 214, 214, 0.5);
+	left: calc(4vw + 8px);
+	width: 90%;
+	top: 10px;
+	margin: 5px 0px;
+	padding: 3px;
+	font-size: 20px;
+	border-radius: 6px;
+	box-shadow: inset 5px 3px 6px 3px rgba(214, 214, 214, 0.5);
 }
 
 #moduleList {
 	border-radius: 6px;
-    left: 2%;
-    position: relative;
-    padding: 5px;
-    margin: 5px;
-    max-height: 85%;
-    height: 94%;
-    max-width: 94%;
-    width: 94%;
-    overflow-y: auto;
-    top: 10px;
+	left: 2%;
+	position: relative;
+	padding: 5px;
+	margin: 5px;
+	max-height: 85%;
+	height: 94%;
+	max-width: 94%;
+	width: 94%;
+	overflow-y: auto;
+	top: 10px;
 }
+
 
 
 #footer {
