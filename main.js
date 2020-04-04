@@ -33,8 +33,9 @@ let updateModuleList = function(list) {
 				<img src="https://i.imgur.com/${data[name].hasOwnProperty("icon") ? data[name].icon : "M22ygpZ"}.png">
 				#${name}
 			</a>
-			<b>Owner: </b> <a href="https://atelier801.com/profile?pr=${data[name].owner.replace("#", "%23")}" class="profile">${data[name].owner}</a>
-			<span class="hoster"><b>Hosted by: </b> <a href="https://atelier801.com/proflie?pr=${data[name].owner.replace("#", "%23")}" class="profile">${data[name].host || data[name].owner}</a></span>
+			<b>Owner:</b> <a href="https://atelier801.com/profile?pr=${htmlifyNickname(data[name].owner)}" class="profile">${data[name].owner}</a>
+			<span class="hoster"><b>Hosted by:</b> <a href="https://atelier801.com/profile?pr=${htmlifyNickname(hoster)}" class="profile">${hoster}</a></span>
+
 		</div>`
 	}
 }
