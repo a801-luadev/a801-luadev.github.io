@@ -1,4 +1,4 @@
-const BASE_URI = "https://a801-luadev.github.io
+const BASE_URI = "https://a801-luadev.github.io"
 
 let redirect = function(url) {
 	window.location.href = url;
