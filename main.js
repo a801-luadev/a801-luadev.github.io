@@ -29,6 +29,7 @@ let updateModuleList = function(list) {
 
 	for (let mData of list) {
 		let name = mData[0];
+		let hoster = data[name].host || data[name].owner;
 		moduleList.innerHTML += `<div class="module">
 			<a href="${BASE_URI + "?redirect=" + name}" class="moduleName">
 				<img src="https://i.imgur.com/${data[name].hasOwnProperty("icon") ? data[name].icon : "M22ygpZ"}.png">
