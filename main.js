@@ -23,6 +23,12 @@ let getMatchedModules = function(query) {
 	return Object.entries(matches).sort((e1, e2) => e2[1] - e1[1]);
 }
 
+let htmlifyNickname = function(str) {
+	return str
+		.replace('#', "%23")
+		.replace('+', "%2B");
+}
+
 let updateModuleList = function(list) {
 	
 	moduleList.innerHTML = "";
