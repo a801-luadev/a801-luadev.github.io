@@ -133,6 +133,7 @@ a {
 
 
 #moduleInfo {
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 	background-color: #254558;
 	border-radius: 6px;
 	left: 50%;
@@ -202,7 +203,7 @@ a {
 }
 
 #footer {
-	bottom: 0;
+	bottom: 10px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	left: 0;
 	position: fixed;
