@@ -16,7 +16,8 @@ let getMatchedModules = function(query) {
 	let matches = {};
 	for (let name of Object.keys(data)) {
 		if (name.includes(query)) {
-			matches[name] = name.match(new RegExp(query, "gi") || []).length;			
+			matches[name] = (name.match(new RegExp(query, "gi")) || []).length;			
+
 		}
 	}
 	return Object.entries(matches).sort((e1, e2) => e2[1] - e1[1]);
