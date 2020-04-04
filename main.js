@@ -78,7 +78,8 @@ window.onload = function() {
 						moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
 
 		
-			if (document.location.search.match(/[?&]hasbutton=true/i))
+			if ((/[?&]hasbutton=true/i).test(document.location.search))
+
 			{
 				cooldownText.remove();
 				redirectButton.classList.remove("hidden");
