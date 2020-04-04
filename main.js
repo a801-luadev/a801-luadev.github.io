@@ -63,7 +63,9 @@ window.onload = function() {
 			moduleName.innerText = moduleData;
 			moduleData = data[moduleData];
 			document.getElementById("owner").innerText = moduleData.owner;
-			if (moduleData.hasOwnProperty("icon")) moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
+			if (moduleData.hasOwnProperty("icon"))
+						moduleIcon.src = `https://i.imgur.com/${moduleData.icon}.png`;
+
 		
 			if (document.location.search.match(/[?&]hasbutton=true/i))
 			{
