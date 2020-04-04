@@ -12,15 +12,17 @@ let redirectCooldown = function(self, url, cooldown) {
 	}
 }
 
+let modulesSort = function(e1, e2) {
+	return e2[1] - e1[1]
+}
+
 let getMatchedModules = function(query) {
 	let matches = {};
 	for (let name of Object.keys(data)) {
-		if (name.includes(query)) {
+		if (name.includes(query))
 			matches[name] = (name.match(new RegExp(query, "gi")) || []).length;			
-
-		}
 	}
-	return Object.entries(matches).sort((e1, e2) => e2[1] - e1[1]);
+	return Object.entries(matches).sort(modulesSort);
 }
 
 let htmlifyNickname = function(str) {
