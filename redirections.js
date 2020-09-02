@@ -70,11 +70,6 @@ data = {
 		"owner": "Ninguem#0095"
 	},
 	"mycity": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5A9RQHREP8KHG&source=url",
-		"icon": "e7JNuiN",
-		"owner": "Fofinhoppp#0000"
-	},
-	"mycity (BRL)": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W6THNY4BBHS2C&source=url",
 		"icon": "e7JNuiN",
 		"owner": "Fofinhoppp#0000"
