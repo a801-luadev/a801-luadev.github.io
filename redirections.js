@@ -1,12 +1,12 @@
 // Example:
 /*
 data = {
-    "bolodefchoco": { // Module name
-        "url": "https://www.paypal.com/", // URL to donation link
-        "icon": "kFrAYfd", // Imgur ID
-        "owner": "Bolodefchoco#0000", // Owner of the module and donation link
-        "host": "Bolodefchoco#0000" // Optional, only if different from owner
-    }
+	"bolodefchoco": { // Module name
+		"url": "https://www.paypal.com/", // URL to donation link
+		"icon": "kFrAYfd", // Imgur ID
+		"owner": "Bolodefchoco#0000", // Owner of the module and donation link
+		"host": "Bolodefchoco#0000" // Optional, only if different from owner
+	}
 }
 */
 
@@ -74,9 +74,9 @@ data = {
 		"icon": "e7JNuiN",
 		"owner": "Fofinhoppp#0000"
 	},
-    	"myhero": {
-        	"url": "https://www.paypal.com/paypalme/majed89",
-        	"icon": "bus9dlk",
-        	"owner": "Bodykudo#0000"
-    	},
+	"myhero": {
+		"url": "https://www.paypal.com/paypalme/majed89",
+		"icon": "bus9dlk",
+		"owner": "Bodykudo#0000"
+	},
 }
