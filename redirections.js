@@ -74,4 +74,9 @@ data = {
 		"icon": "e7JNuiN",
 		"owner": "Fofinhoppp#0000"
 	},
+    	"myhero": {
+        	"url": "https://www.paypal.com/paypalme/majed89",
+        	"icon": "bus9dlk",
+        	"owner": "Bodykudo#0000"
+    	},
 }
