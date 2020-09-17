@@ -75,7 +75,7 @@ data = {
 		"owner": "Fofinhoppp#0000"
 	},
 	"myhero": {
-		"url": "https://www.paypal.com/paypalme/majed89",
+		"url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=YYN9RZ2MU7AA4&source=url",
 		"icon": "bus9dlk",
 		"owner": "Bodykudo#0000"
 	},
