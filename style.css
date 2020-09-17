@@ -103,6 +103,8 @@ a {
 }
 
 .module {
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 6px;
 	position: relative;
 	margin: 8px;
@@ -133,6 +135,8 @@ a {
 
 
 #moduleInfo {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 	background-color: #254558;
 	border-radius: 6px;
 	left: 50%;
@@ -159,6 +163,8 @@ a {
 }
 
 #modules {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 	border-radius: 5px;
 	background-color: #254558;
 	width: 96%;
@@ -202,7 +208,7 @@ a {
 }
 
 #footer {
-	bottom: 0;
+	bottom: 10px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	left: 0;
 	position: fixed;
