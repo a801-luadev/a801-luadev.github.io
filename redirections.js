@@ -1,5 +1,3 @@
-https://www.patreon.com/lautenschlager_id
-
 // Example:
 /*
 data = {
