@@ -1,3 +1,5 @@
+https://www.patreon.com/lautenschlager_id
+
 // Example:
 /*
 data = {
@@ -12,51 +14,51 @@ data = {
 
 data = {
 	"bolodefchoco": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "MIHrUyr",
 		"owner": "Bolodefchoco#0000"
 	},
 	"signal": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "28etCHe",
 		"owner": "Bolodefchoco#0000"
 	},
 	"cannonup": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "uhcnY3F",
 		"owner": "Bolodefchoco#0000"
 	},
 	"infected": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "RmWupLZ",
 		"owner": "Bolodefchoco#0000"
 	},
 	"crowdsurf": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "lyZO1rI",
 		"owner": "Bolodefchoco#0000"
 	},
 	"hardcamp": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "hnMrums",
 		"owner": "Bolodefchoco#0000"
 	},
 	"grounds": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "zBCSQ9i",
 		"owner": "Bolodefchoco#0000"
 	},
 	"bolodefchoco0perguntas": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"owner": "Bolodefchoco#0000"
 	},
 	"powers": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",
 		"icon": "GkMRm2r",
 		"owner": "Bolodefchoco#0000"
 	},
 	"parkour": {
-		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DLRQ67WGFYK7A&source=url",//"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VB6QN425S4SVU&item_name=Module+Team%27s+Donations+-+Parkour+Module&currency_code=USD&source=url",
+		"url": "https://www.patreon.com/lautenschlager_id",//"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VB6QN425S4SVU&item_name=Module+Team%27s+Donations+-+Parkour+Module&currency_code=USD&source=url",
 		"owner": "Tocutoeltuco#0000"
 	},
 	"circuit": {
