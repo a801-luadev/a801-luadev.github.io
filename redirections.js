@@ -56,8 +56,8 @@ data = {
 		"owner": "Bolodefchoco#0015"
 	},
 	"parkour": {
-		"url": "https://www.patreon.com/lautenschlager_id",//"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VB6QN425S4SVU&item_name=Module+Team%27s+Donations+-+Parkour+Module&currency_code=USD&source=url",
-		"owner": "Tocutoeltuco#0000"
+		"url": "https://www.patreon.com/mckeydown",//"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VB6QN425S4SVU&item_name=Module+Team%27s+Donations+-+Parkour+Module&currency_code=USD&source=url",
+		"owner": "Mckeydown#0000"
 	},
 	"circuit": {
 		"url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YYQJZHPQH4FJ4&source=url",
